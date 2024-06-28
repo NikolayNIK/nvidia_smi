@@ -1,0 +1,11 @@
+name: nvidia_smi
+description: A third-party Dart library interfacing with nvidia-smi utility. Not affiliated with Nvidia Corporation.
+version: 0.0.1
+homepage: https://github.com/NikolayNIK/nvidia_smi
+issue_tracker: https://github.com/DinoLeung/NikolayNIK/nvidia_smi/issues
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dev_dependencies:
+  lints: ^3.0.0
