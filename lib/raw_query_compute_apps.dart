@@ -3,7 +3,7 @@ import './gpu_id.dart';
 
 Future<Iterable<List<String>>> query(
   List<String> columns, {
-  required GpuId? id,
+  GpuId? id,
   bool includeHeaders = false,
   bool includeUnits = false,
 }) async =>
@@ -34,13 +34,21 @@ const gpuUuid = 'gpu_uuid';
 const pid = 'pid';
 
 /// Process Name
+///
+/// Equivalent to [name].
 const processName = 'process_name';
 
 /// Process Name
+///
+/// Equivalent to [processName].
 const name = 'name';
 
 /// Amount memory used on the device by the context. Not available on Windows when running in WDDM mode because Windows KMD manages all the memory not NVIDIA driver.
+///
+/// Equivalent to [usedMemory].
 const usedGpuMemory = 'used_gpu_memory';
 
 /// Amount memory used on the device by the context. Not available on Windows when running in WDDM mode because Windows KMD manages all the memory not NVIDIA driver.
+///
+/// Equivalent to [usedGpuMemory].
 const usedMemory = 'used_memory';
