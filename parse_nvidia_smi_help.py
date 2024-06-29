@@ -7,6 +7,9 @@ import camel_converter
 current_command = None
 current_description = None
 
+def command_to_dart_name(command):
+    return camel_converter.to_camel(command.replace('.', '_'))
+
 def flush_command():
     global current_command
     global current_description
@@ -15,7 +18,11 @@ def flush_command():
         for command in current_command:
             for line in current_description:
                 print('///', line)
-            print('const', camel_converter.to_camel(command.replace('.', '_')), '=', '\'' + command + '\';')
+            aliases = list(filter(lambda a: a != command, current_command))
+            if len(aliases):
+                print('///')
+                print('///', 'Equivalent to', ', '.join(map(lambda a: f'[{command_to_dart_name(a)}]', aliases)) + '.')
+            print('const', command_to_dart_name(command), '=', '\'' + command + '\';')
             print()
     
     current_command = None
