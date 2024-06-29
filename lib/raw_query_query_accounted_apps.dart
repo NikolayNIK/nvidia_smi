@@ -37,15 +37,23 @@ const vgpuInstance = 'vgpu_instance';
 const pid = 'pid';
 
 /// GPU Utilization
+///
+/// Equivalent to [gpuUtil].
 const gpuUtilization = 'gpu_utilization';
 
 /// GPU Utilization
+///
+/// Equivalent to [gpuUtilization].
 const gpuUtil = 'gpu_util';
 
 /// Percentage of GPU memory utilized on the device by the context.
+///
+/// Equivalent to [memUtil].
 const memUtilization = 'mem_utilization';
 
 /// Percentage of GPU memory utilized on the device by the context.
+///
+/// Equivalent to [memUtilization].
 const memUtil = 'mem_util';
 
 /// Maximum amount memory used on the device by the context.

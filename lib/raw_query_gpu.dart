@@ -29,27 +29,43 @@ const vgpuDriverCapabilityHeterogenousMultivgpu =
 const count = 'count';
 
 /// The official product name of the GPU. This is an alphanumeric string. For all products.
+///
+/// Equivalent to [gpuName].
 const name = 'name';
 
 /// The official product name of the GPU. This is an alphanumeric string. For all products.
+///
+/// Equivalent to [name].
 const gpuName = 'gpu_name';
 
 /// This number matches the serial number physically printed on each board. It is a globally unique immutable alphanumeric value.
+///
+/// Equivalent to [gpuSerial].
 const serial = 'serial';
 
 /// This number matches the serial number physically printed on each board. It is a globally unique immutable alphanumeric value.
+///
+/// Equivalent to [serial].
 const gpuSerial = 'gpu_serial';
 
 /// This value is the globally unique immutable alphanumeric identifier of the GPU. It does not correspond to any physical label on the board.
+///
+/// Equivalent to [gpuUuid].
 const uuid = 'uuid';
 
 /// This value is the globally unique immutable alphanumeric identifier of the GPU. It does not correspond to any physical label on the board.
+///
+/// Equivalent to [uuid].
 const gpuUuid = 'gpu_uuid';
 
 /// PCI bus id as "domain:bus:device.function", in hex.
+///
+/// Equivalent to [gpuBusId].
 const pciBusId = 'pci.bus_id';
 
 /// PCI bus id as "domain:bus:device.function", in hex.
+///
+/// Equivalent to [pciBusId].
 const gpuBusId = 'gpu_bus_id';
 
 /// PCI domain number, in hex.
@@ -137,9 +153,13 @@ const driverModelPending = 'driver_model.pending';
 const vbiosVersion = 'vbios_version';
 
 /// Global version of the infoROM image. Image version just like VBIOS version uniquely describes the exact version of the infoROM flashed on the board in contrast to infoROM object version which is only an indicator of supported features.
+///
+/// Equivalent to [inforomImage].
 const inforomImg = 'inforom.img';
 
 /// Global version of the infoROM image. Image version just like VBIOS version uniquely describes the exact version of the infoROM flashed on the board in contrast to infoROM object version which is only an indicator of supported features.
+///
+/// Equivalent to [inforomImg].
 const inforomImage = 'inforom.image';
 
 /// Version for the OEM configuration data.
@@ -149,9 +169,13 @@ const inforomOem = 'inforom.oem';
 const inforomEcc = 'inforom.ecc';
 
 /// Version for the power management data.
+///
+/// Equivalent to [inforomPower].
 const inforomPwr = 'inforom.pwr';
 
 /// Version for the power management data.
+///
+/// Equivalent to [inforomPwr].
 const inforomPower = 'inforom.power';
 
 /// Checks if a GPU reset is required.
@@ -162,15 +186,23 @@ const resetStatusDrainAndResetRecommended =
     'reset_status.drain_and_reset_recommended';
 
 /// The GOM currently in use.
+///
+/// Equivalent to [gpuOperationModeCurrent].
 const gomCurrent = 'gom.current';
 
 /// The GOM currently in use.
+///
+/// Equivalent to [gomCurrent].
 const gpuOperationModeCurrent = 'gpu_operation_mode.current';
 
 /// The GOM that will be used on the next reboot.
+///
+/// Equivalent to [gpuOperationModePending].
 const gomPending = 'gom.pending';
 
 /// The GOM that will be used on the next reboot.
+///
+/// Equivalent to [gomPending].
 const gpuOperationModePending = 'gpu_operation_mode.pending';
 
 /// The fan speed value is the percent of the product's maximum noise tolerance fan speed that the device's fan is currently intended to run at. This value may exceed 100% in certain cases. Note: The reported speed is the intended fan speed. If the fan is physically blocked and unable to spin, this output will not match the actual fan speed. Many parts do not report fan speeds because they rely on cooling via fans in the surrounding enclosure.
@@ -180,35 +212,55 @@ const fanSpeed = 'fan.speed';
 const pstate = 'pstate';
 
 /// Bitmask of supported clock event reasons. See nvml.h for more details.
+///
+/// Equivalent to [clocksThrottleReasonsSupported].
 const clocksEventReasonsSupported = 'clocks_event_reasons.supported';
 
 /// Bitmask of supported clock event reasons. See nvml.h for more details.
+///
+/// Equivalent to [clocksEventReasonsSupported].
 const clocksThrottleReasonsSupported = 'clocks_throttle_reasons.supported';
 
 /// Bitmask of active clock event reasons. See nvml.h for more details.
+///
+/// Equivalent to [clocksThrottleReasonsActive].
 const clocksEventReasonsActive = 'clocks_event_reasons.active';
 
 /// Bitmask of active clock event reasons. See nvml.h for more details.
+///
+/// Equivalent to [clocksEventReasonsActive].
 const clocksThrottleReasonsActive = 'clocks_throttle_reasons.active';
 
 /// Nothing is running on the GPU and the clocks are dropping to Idle state. This limiter may be removed in a later release.
+///
+/// Equivalent to [clocksThrottleReasonsGpuIdle].
 const clocksEventReasonsGpuIdle = 'clocks_event_reasons.gpu_idle';
 
 /// Nothing is running on the GPU and the clocks are dropping to Idle state. This limiter may be removed in a later release.
+///
+/// Equivalent to [clocksEventReasonsGpuIdle].
 const clocksThrottleReasonsGpuIdle = 'clocks_throttle_reasons.gpu_idle';
 
 /// GPU clocks are limited by applications clocks setting. E.g. can be changed by nvidia-smi --applications-clocks=
+///
+/// Equivalent to [clocksThrottleReasonsApplicationsClocksSetting].
 const clocksEventReasonsApplicationsClocksSetting =
     'clocks_event_reasons.applications_clocks_setting';
 
 /// GPU clocks are limited by applications clocks setting. E.g. can be changed by nvidia-smi --applications-clocks=
+///
+/// Equivalent to [clocksEventReasonsApplicationsClocksSetting].
 const clocksThrottleReasonsApplicationsClocksSetting =
     'clocks_throttle_reasons.applications_clocks_setting';
 
 /// SW Power Scaling algorithm is reducing the clocks below requested clocks because the GPU is consuming too much power. E.g. SW power cap limit can be changed with nvidia-smi --power-limit=
+///
+/// Equivalent to [clocksThrottleReasonsSwPowerCap].
 const clocksEventReasonsSwPowerCap = 'clocks_event_reasons.sw_power_cap';
 
 /// SW Power Scaling algorithm is reducing the clocks below requested clocks because the GPU is consuming too much power. E.g. SW power cap limit can be changed with nvidia-smi --power-limit=
+///
+/// Equivalent to [clocksEventReasonsSwPowerCap].
 const clocksThrottleReasonsSwPowerCap = 'clocks_throttle_reasons.sw_power_cap';
 
 /// HW Slowdown (reducing the core clocks by a factor of 2 or more) is engaged. This is an indicator of:
@@ -217,6 +269,8 @@ const clocksThrottleReasonsSwPowerCap = 'clocks_throttle_reasons.sw_power_cap';
 /// * Power draw is too high and Fast Trigger protection is reducing the clocks
 /// * May be also reported during PState or clock change
 /// * This behavior may be removed in a later release
+///
+/// Equivalent to [clocksThrottleReasonsHwSlowdown].
 const clocksEventReasonsHwSlowdown = 'clocks_event_reasons.hw_slowdown';
 
 /// HW Slowdown (reducing the core clocks by a factor of 2 or more) is engaged. This is an indicator of:
@@ -225,29 +279,43 @@ const clocksEventReasonsHwSlowdown = 'clocks_event_reasons.hw_slowdown';
 /// * Power draw is too high and Fast Trigger protection is reducing the clocks
 /// * May be also reported during PState or clock change
 /// * This behavior may be removed in a later release
+///
+/// Equivalent to [clocksEventReasonsHwSlowdown].
 const clocksThrottleReasonsHwSlowdown = 'clocks_throttle_reasons.hw_slowdown';
 
 /// HW Thermal Slowdown (reducing the core clocks by a factor of 2 or more) is engaged. This is an indicator of temperature being too high
+///
+/// Equivalent to [clocksThrottleReasonsHwThermalSlowdown].
 const clocksEventReasonsHwThermalSlowdown =
     'clocks_event_reasons.hw_thermal_slowdown';
 
 /// HW Thermal Slowdown (reducing the core clocks by a factor of 2 or more) is engaged. This is an indicator of temperature being too high
+///
+/// Equivalent to [clocksEventReasonsHwThermalSlowdown].
 const clocksThrottleReasonsHwThermalSlowdown =
     'clocks_throttle_reasons.hw_thermal_slowdown';
 
 /// HW Power Brake Slowdown (reducing the core clocks by a factor of 2 or more) is engaged. This is an indicator of External Power Brake Assertion being triggered (e.g. by the system power supply)
+///
+/// Equivalent to [clocksThrottleReasonsHwPowerBrakeSlowdown].
 const clocksEventReasonsHwPowerBrakeSlowdown =
     'clocks_event_reasons.hw_power_brake_slowdown';
 
 /// HW Power Brake Slowdown (reducing the core clocks by a factor of 2 or more) is engaged. This is an indicator of External Power Brake Assertion being triggered (e.g. by the system power supply)
+///
+/// Equivalent to [clocksEventReasonsHwPowerBrakeSlowdown].
 const clocksThrottleReasonsHwPowerBrakeSlowdown =
     'clocks_throttle_reasons.hw_power_brake_slowdown';
 
 /// SW Thermal capping algorithm is reducing clocks below requested clocks because GPU temperature is higher than Max Operating Temp.
+///
+/// Equivalent to [clocksThrottleReasonsSwThermalSlowdown].
 const clocksEventReasonsSwThermalSlowdown =
     'clocks_event_reasons.sw_thermal_slowdown';
 
 /// SW Thermal capping algorithm is reducing clocks below requested clocks because GPU temperature is higher than Max Operating Temp.
+///
+/// Equivalent to [clocksEventReasonsSwThermalSlowdown].
 const clocksThrottleReasonsSwThermalSlowdown =
     'clocks_throttle_reasons.sw_thermal_slowdown';
 
@@ -256,6 +324,8 @@ const clocksThrottleReasonsSwThermalSlowdown =
 /// * will boost to the minimum possible clocks across the entire group. Look at
 /// * the event reasons for other GPUs in the system to see why those GPUs are
 /// * holding this one at lower clocks.
+///
+/// Equivalent to [clocksThrottleReasonsSyncBoost].
 const clocksEventReasonsSyncBoost = 'clocks_event_reasons.sync_boost';
 
 /// Sync Boost This GPU has been added to a Sync boost group with nvidia-smi or DCGM in
@@ -263,6 +333,8 @@ const clocksEventReasonsSyncBoost = 'clocks_event_reasons.sync_boost';
 /// * will boost to the minimum possible clocks across the entire group. Look at
 /// * the event reasons for other GPUs in the system to see why those GPUs are
 /// * holding this one at lower clocks.
+///
+/// Equivalent to [clocksEventReasonsSyncBoost].
 const clocksThrottleReasonsSyncBoost = 'clocks_throttle_reasons.sync_boost';
 
 /// Total installed GPU memory.
@@ -459,15 +531,23 @@ const eccErrorsUncorrectedAggregateTotal =
     'ecc.errors.uncorrected.aggregate.total';
 
 /// The number of GPU device memory pages that have been retired due to multiple single bit ECC errors.
+///
+/// Equivalent to [retiredPagesSbe].
 const retiredPagesSingleBitEccCount = 'retired_pages.single_bit_ecc.count';
 
 /// The number of GPU device memory pages that have been retired due to multiple single bit ECC errors.
+///
+/// Equivalent to [retiredPagesSingleBitEccCount].
 const retiredPagesSbe = 'retired_pages.sbe';
 
 /// The number of GPU device memory pages that have been retired due to a double bit ECC error.
+///
+/// Equivalent to [retiredPagesDbe].
 const retiredPagesDoubleBitCount = 'retired_pages.double_bit.count';
 
 /// The number of GPU device memory pages that have been retired due to a double bit ECC error.
+///
+/// Equivalent to [retiredPagesDoubleBitCount].
 const retiredPagesDbe = 'retired_pages.dbe';
 
 /// Checks if any GPU device memory pages are pending retirement on the next reboot. Pages that are pending retirement can still be allocated, and may cause further reliability issues.
@@ -510,67 +590,107 @@ const powerMinLimit = 'power.min_limit';
 const powerMaxLimit = 'power.max_limit';
 
 /// Current frequency of graphics (shader) clock.
+///
+/// Equivalent to [clocksGr].
 const clocksCurrentGraphics = 'clocks.current.graphics';
 
 /// Current frequency of graphics (shader) clock.
+///
+/// Equivalent to [clocksCurrentGraphics].
 const clocksGr = 'clocks.gr';
 
 /// Current frequency of SM (Streaming Multiprocessor) clock.
+///
+/// Equivalent to [clocksSm].
 const clocksCurrentSm = 'clocks.current.sm';
 
 /// Current frequency of SM (Streaming Multiprocessor) clock.
+///
+/// Equivalent to [clocksCurrentSm].
 const clocksSm = 'clocks.sm';
 
 /// Current frequency of memory clock.
+///
+/// Equivalent to [clocksMem].
 const clocksCurrentMemory = 'clocks.current.memory';
 
 /// Current frequency of memory clock.
+///
+/// Equivalent to [clocksCurrentMemory].
 const clocksMem = 'clocks.mem';
 
 /// Current frequency of video encoder/decoder clock.
+///
+/// Equivalent to [clocksVideo].
 const clocksCurrentVideo = 'clocks.current.video';
 
 /// Current frequency of video encoder/decoder clock.
+///
+/// Equivalent to [clocksCurrentVideo].
 const clocksVideo = 'clocks.video';
 
 /// User specified frequency of graphics (shader) clock.
+///
+/// Equivalent to [clocksApplicationsGr].
 const clocksApplicationsGraphics = 'clocks.applications.graphics';
 
 /// User specified frequency of graphics (shader) clock.
+///
+/// Equivalent to [clocksApplicationsGraphics].
 const clocksApplicationsGr = 'clocks.applications.gr';
 
 /// User specified frequency of memory clock.
+///
+/// Equivalent to [clocksApplicationsMem].
 const clocksApplicationsMemory = 'clocks.applications.memory';
 
 /// User specified frequency of memory clock.
+///
+/// Equivalent to [clocksApplicationsMemory].
 const clocksApplicationsMem = 'clocks.applications.mem';
 
 /// Default frequency of applications graphics (shader) clock.
+///
+/// Equivalent to [clocksDefaultApplicationsGr].
 const clocksDefaultApplicationsGraphics =
     'clocks.default_applications.graphics';
 
 /// Default frequency of applications graphics (shader) clock.
+///
+/// Equivalent to [clocksDefaultApplicationsGraphics].
 const clocksDefaultApplicationsGr = 'clocks.default_applications.gr';
 
 /// Default frequency of applications memory clock.
+///
+/// Equivalent to [clocksDefaultApplicationsMem].
 const clocksDefaultApplicationsMemory = 'clocks.default_applications.memory';
 
 /// Default frequency of applications memory clock.
+///
+/// Equivalent to [clocksDefaultApplicationsMemory].
 const clocksDefaultApplicationsMem = 'clocks.default_applications.mem';
 
 /// Maximum frequency of graphics (shader) clock.
+///
+/// Equivalent to [clocksMaxGr].
 const clocksMaxGraphics = 'clocks.max.graphics';
 
 /// Maximum frequency of graphics (shader) clock.
+///
+/// Equivalent to [clocksMaxGraphics].
 const clocksMaxGr = 'clocks.max.gr';
 
 /// Maximum frequency of SM (Streaming Multiprocessor) clock.
 const clocksMaxSm = 'clocks.max.sm';
 
 /// Maximum frequency of memory clock.
+///
+/// Equivalent to [clocksMaxMem].
 const clocksMaxMemory = 'clocks.max.memory';
 
 /// Maximum frequency of memory clock.
+///
+/// Equivalent to [clocksMaxMemory].
 const clocksMaxMem = 'clocks.max.mem';
 
 /// The MIG mode that the GPU is currently operating under.

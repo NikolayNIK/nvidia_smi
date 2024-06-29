@@ -31,13 +31,21 @@ const gpuSerial = 'gpu_serial';
 const gpuUuid = 'gpu_uuid';
 
 /// Memory Clock
+///
+/// Equivalent to [mem].
 const memory = 'memory';
 
 /// Memory Clock
+///
+/// Equivalent to [memory].
 const mem = 'mem';
 
 /// Graphics Clock
+///
+/// Equivalent to [gr].
 const graphics = 'graphics';
 
 /// Graphics Clock
+///
+/// Equivalent to [graphics].
 const gr = 'gr';
