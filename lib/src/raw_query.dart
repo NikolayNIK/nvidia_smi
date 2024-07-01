@@ -35,5 +35,5 @@ Future<Iterable<List<String>>> query(
     );
   }
 
-  return parseCsv(result.stdout.toString().trim());
+  return parseCsv(result.stdout.toString().trim(), valueSeparator: ', ');
 }
